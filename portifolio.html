@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Leandro Lisboa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, blue, purple);
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 100%;
+            margin: auto;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+        }
+        .projeto {
+            width: 100%;
+            margin: 20px 0;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        input, textarea, button {
+            margin-bottom: 30px;
+            padding: 10px;
+            width: 100%;
+
+            border-radius: 10px;
+        }
+        .nav{
+            background-color: black;
+            width: 90%;
+            border: solid 2px gray;
+            border-radius: 15px;
+            padding: 20px;
+        }
+        #projetos{
+            background-color: black;
+            width: 90%;
+            border: solid 2px gray;
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 30px;
+        }
+        #sobre{
+            background-color: black;
+            width: 90%;
+            border: solid 2px gray;
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 30px;
+        }
+        #contato{
+            width: 70%;
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+        .projeto-container{
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+        }
+    </style>
+    <script>
+        function validarFormulario() {
+            let nome = document.getElementById('nome').value;
+            let email = document.getElementById('email').value;
+            let mensagem = document.getElementById('mensagem').value;
+            if (nome === "" || email === "" || mensagem === "") {
+                alert("Todos os campos devem ser preenchidos.");
+                return false;
+            }
+            alert("Mensagem enviada com sucesso!");
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <img src="./c17e1bf9-0d0f-4abd-bb51-d318cabd3af5.jpg" alt="Leandro Lisboa">
+            <h1>Leandro Lisboa</h1>
+            <p>Desenvolvedor Web | Apaixonado por Tecnologia</p>
+        </div>
+        
+        <section id="sobre">
+            <h2>Sobre Mim</h2>
+            <p>Tenho 42 anos, sou da area da mecanica industrial, mas tambem gosto da area de TI
+                 atraves da graduação venho adquirindo experiencia na area, busco conciliar as duas areas profissionalmente</p>
+        </section>
+        
+        <section id="projetos">
+            <h2>Projetos</h2>
+            <div class="projeto-container">
+                <div class="projeto">
+                    <h3>Projeto 1</h3>
+                    <img src="https://www.print-conductor.com/media/6-single-print-job-mode.png" alt="Projeto 1">
+                    <p>imagem ilustrativa ainda não possuo projetos</p>
+                </div>
+                <div class="projeto">
+                    <h3>Projeto 2</h3>
+                    <img src="https://www.nucleodoconhecimento.com.br/wp-content/uploads/2021/07/grafico-5-5.png" alt="Projeto 2">
+                    <p>imagem ilustrativa ainda não possuo projetos</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contato">
+            <h2>Contato</h2>
+            <form onsubmit="return validarFormulario()">
+                <input type="text" id="nome" placeholder="Seu Nome">
+                <input type="email" id="email" placeholder="leandrorlisboa@gmail.com">
+                <textarea id="mensagem" placeholder="Sua Mensagem"></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </div>
+</body>
+</html>
